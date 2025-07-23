@@ -1,0 +1,21 @@
+{
+  "name": "tahmi/mini-blog-comments",
+  "autoload": {
+    "psr-4": {
+      "Core\\": "src/Core/",
+      "Models\\": "src/Models/",
+      "Traits\\": "src/Traits/",
+      "Interfaces\\": "src/Interfaces/"
+
+    }
+  },
+  "authors": [
+    {
+      "name": "Tahmid Ferdous",
+      "email": "62140352+tahmid-tf@users.noreply.github.com"
+    }
+  ],
+  "require": {
+    "ext-pdo": "*"
+  }
+}
