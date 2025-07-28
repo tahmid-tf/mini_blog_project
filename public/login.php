@@ -11,7 +11,6 @@ session_write_close();
 
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>

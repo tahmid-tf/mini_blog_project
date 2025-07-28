@@ -21,10 +21,20 @@ class Comment{
         ]);
     }
 
-    public function getAll(){
-        $stmt = $this->pdo->query("SELECT * FROM `comments` JOIN users ON users.id = comments.user_id ORDER BY comments.created_at DESC;");
+    public function getAll() {
+        $stmt = $this->pdo->query("
+        SELECT 
+            comments.id AS comment_id,
+            comments.content,
+            comments.created_at,
+            users.name
+        FROM comments
+        JOIN users ON users.id = comments.user_id
+        ORDER BY comments.created_at DESC
+    ");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
 
     public function getById($id)
     {
