@@ -5,6 +5,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use Core\Session;
 use Core\CSRFToken;
 use Models\Comment;
+use Utils\LogNotifier;
 
 Session::start();
 
@@ -22,7 +23,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $content = trim($_POST['content']);
 
     if (!empty($content)) {
-        $comment = new Comment();
+        $notifier = new LogNotifier();
+        $comment = new Comment($notifier);
         $comment->create(1, $content);
         echo "Comment created";
     }else{

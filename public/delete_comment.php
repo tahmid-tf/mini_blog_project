@@ -7,6 +7,7 @@ use Core\CSRFToken;
 use Models\Comment;
 use Models\Admin;
 use Models\Guest;
+use Interfaces\LogNotifier;
 
 Session::start();
 

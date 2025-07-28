@@ -5,7 +5,8 @@
       "Core\\": "src/Core/",
       "Models\\": "src/Models/",
       "Traits\\": "src/Traits/",
-      "Interfaces\\": "src/Interfaces/"
+      "Interfaces\\": "src/Interfaces/",
+      "Utils\\": "src/Utils/"
 
     }
   },
